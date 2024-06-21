@@ -1,0 +1,69 @@
+.datu-slani {
+  .section-title {
+    font-size: 16px;
+    font-weight: bold;
+    margin-bottom: 8px;
+  }
+
+  .sub-section {
+    margin-top: 16px;
+  }
+
+  .sub-title {
+    font-size: 14px;
+    font-weight: bold;
+    margin-bottom: 8px;
+  }
+
+  .toggle-switch {
+    display: flex; /* Use flexbox */
+    align-items: center; /* Align items vertically */
+  }
+
+  .slider {
+    position: relative; /* Relative positioning */
+    cursor: pointer;
+    width: 34px;
+    height: 14px;
+    margin-left: 8px;
+    background-color: #ccc;
+    transition: background-color 0.4s;
+    border-radius: 34px;
+
+    &:before {
+      content: "";
+      position: absolute;
+      height: 12px;
+      width: 12px;
+      left: 2px;
+      bottom: 1px;
+      background-color: white;
+      transition: transform 0.4s;
+      border-radius: 50%;
+    }
+  }
+
+  input:checked + .slider {
+    background-color: #ccc;
+  }
+
+  input:checked + .slider:before {
+    transform: translateX(16px);
+  }
+
+  .toggle-item {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    margin-top: 8px;
+  }
+
+  .accordion-icon {
+    transition: transform 0.3s ease;
+    margin-right: 5px;
+  }
+
+  .accordion-icon.open {
+    transform: rotate(90deg);
+  }
+}

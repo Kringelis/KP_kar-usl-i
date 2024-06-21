@@ -1,0 +1,131 @@
+.pievienotie-dati {
+  .section-title {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    font-size: 16px;
+    cursor: pointer;
+    padding: 10px 0;
+    margin-bottom: 4px;
+    border-bottom: 1px solid #ccc;
+
+    .accordion-icon {
+      transition: transform 0.3s ease;
+      margin-left: auto;
+    }
+
+    .accordion-icon.open {
+      transform: rotate(90deg);
+    }
+
+    .sub-section {
+      padding-left: 20px;
+      margin-top: 16px;
+      display: flex;
+      flex-direction: column;
+      align-items: flex-start;
+    }
+
+    .toggle-item {
+      width: 100%;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      margin-top: 8px;
+      padding: 8px;
+      border-bottom: 1px solid #ccc;
+
+      .item-info {
+        flex: 1;
+      }
+
+      .info {
+        font-size: 12px;
+        color: gray;
+      }
+
+      .icons {
+        display: flex;
+        align-items: center;
+
+        label {
+          display: flex;
+          align-items: center;
+          margin-right: 10px;
+          position: relative;
+
+          input[type="color"] {
+            visibility: hidden;
+            position: absolute;
+          }
+
+          .color-block {
+            width: 20px;
+            height: 20px;
+            border: 1px solid #ccc;
+            cursor: pointer;
+          }
+        }
+      }
+    }
+
+    .toggle-switch {
+      position: relative;
+      display: inline-block;
+      width: 20px;
+      height: 10px;
+      margin-left: 8px;
+      vertical-align: middle;
+
+      input {
+        opacity: 0;
+        width: 0;
+        height: 0;
+      }
+
+      .slider {
+        position: absolute;
+        cursor: pointer;
+        top: 0;
+        left: 0;
+        right: 0;
+        bottom: 0;
+        background-color: white;
+        transition: 0.4s;
+        border-radius: 34px;
+        border: 1px solid black;
+
+        &:before {
+          content: "";
+          position: absolute;
+          height: 6px;
+          width: 6px;
+          background-color: black;
+          transition: 0.4s;
+          border-radius: 50%;
+          left: 1px;
+          bottom: 1px;
+          right: 100%;
+          margin: auto;
+        }
+      }
+
+      input:checked + .slider {
+        background-color: #007bff;
+        border-color: transparent;
+      }
+
+      input:checked + .slider:before {
+        transform: translateX(10px);
+        background-color: white;
+      }
+    }
+    .dividing-line {
+      width: 276px;
+      height: 1px;
+      background-color: #000;
+      margin: 0 auto;
+      margin-top: 5px;
+    }
+  }
+}

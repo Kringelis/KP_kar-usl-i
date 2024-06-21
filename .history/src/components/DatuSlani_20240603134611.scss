@@ -1,0 +1,106 @@
+.datu-slani {
+  .section-title {
+    font-size: 16px;
+    font-weight: bold;
+    margin-bottom: 8px;
+  }
+
+  .sub-section {
+    margin-top: 16px;
+  }
+
+  .sub-title {
+    font-size: 14px;
+    font-weight: bold;
+    margin-bottom: 8px;
+  }
+
+  .toggle-switch {
+    position: relative;
+    display: inline-block;
+    width: 20px;
+    height: 10px;
+    margin-left: 8px;
+    vertical-align: middle;
+
+    input {
+      opacity: 0;
+      width: 0;
+      height: 0;
+    }
+
+    .slider {
+      position: absolute;
+      cursor: pointer;
+      top: 0;
+      left: 0;
+      right: 0;
+      bottom: 0;
+      background-color: white;
+      transition: 0.4s;
+      border-radius: 34px;
+      border: 1px solid black;
+
+      &:before {
+        content: "";
+        position: absolute;
+        height: 6px;
+        width: 6px;
+        background-color: black;
+        transition: 0.4s;
+        border-radius: 50%;
+        left: 1px;
+        bottom: 1px;
+        right: 100%;
+        margin: auto;
+      }
+    }
+
+    input:checked + .slider {
+      background-color: #007bff;
+      border-color: transparent;
+    }
+
+    input:checked + .slider:before {
+      transform: translateX(10px);
+      background-color: white;
+    }
+  }
+
+  .toggle-item {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    margin-top: 8px;
+  }
+
+  .accordion-title {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    cursor: pointer;
+    padding: 10px 0;
+
+    .accordion-left {
+      display: flex;
+      align-items: center;
+    }
+
+    .accordion-text {
+      margin-right: auto;
+    }
+  }
+
+  .accordion-icon {
+    transition: transform 0.3s ease;
+    margin-right: 5px;
+  }
+
+  .accordion-icon.open {
+    transform: rotate(90deg);
+  }
+
+  .accordion-content {
+    padding-left: 20px;
+  }
+}

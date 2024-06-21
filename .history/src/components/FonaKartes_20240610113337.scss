@@ -1,0 +1,144 @@
+.fona-kartes {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+
+  .fona-kartes-item {
+    width: 264px;
+    padding: 8px 16px;
+    background-color: #ffffff;
+    display: flex;
+    align-items: center;
+    font-size: 14px;
+    color: #000000;
+    opacity: 1;
+    transition: background-color 0.3s ease, color 0.3s ease;
+    position: relative;
+    cursor: pointer;
+
+    &:hover {
+      background-color: #e0e0e0;
+    }
+
+    &.active {
+      .item-title {
+        color: #007bff;
+      }
+
+      .item-slider {
+        display: block;
+      }
+      .item-square {
+        border: 2px solid #007bff;
+        border-radius: 3%;
+      }
+    }
+
+    .info-icon {
+      width: 16px;
+      height: 16px;
+      margin-right: 8px;
+    }
+
+    .icon-container {
+      position: relative;
+      display: inline-block;
+    }
+
+    .tooltip {
+      visibility: hidden;
+      position: absolute;
+      top: -40px; /* Adjusted to make room for the arrow */
+      left: 50%;
+      transform: translateX(-50%);
+      background-color: #fff;
+      color: #000;
+      padding: 5px;
+      box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.1); /* Added box shadow */
+      border-radius: 3px;
+      font-size: 12px;
+      white-space: nowrap;
+      z-index: 1;
+      opacity: 0;
+      transition: opacity 0.3s, box-shadow 0.3s;
+      text-align: center;
+
+      &::after {
+        content: "";
+        position: absolute;
+        bottom: -5px; /* Position the arrow at the bottom */
+        left: 50%;
+        transform: translateX(-50%);
+        width: 0;
+        height: 0;
+        border-left: 5px solid transparent;
+        border-right: 5px solid transparent;
+        border-top: 5px solid #fff; /* Arrow color matches tooltip background */
+        box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.1); /* Arrow box shadow */
+      }
+    }
+
+    .icon-container:hover .tooltip {
+      visibility: visible;
+      opacity: 1;
+    }
+
+    .item-square {
+      width: 48px;
+      height: 48px;
+      border: 1px solid #000;
+      border-radius: 3%;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      margin-right: 8px;
+      flex-shrink: 0;
+    }
+
+    .item-text {
+      display: flex;
+      flex-direction: column;
+      gap: 4px;
+    }
+
+    .item-title {
+      //font-weight: bold;
+    }
+
+    .item-subtitle {
+      font-size: 12px;
+      color: #666;
+    }
+
+    .slider-container {
+      display: flex;
+      align-items: center;
+      gap: 4px;
+      margin-top: 4px;
+
+      .hollow-square {
+        width: 7px;
+        height: 7px;
+        border: 1px solid #000;
+      }
+
+      .item-slider {
+        -webkit-appearance: none;
+        background: #000;
+        height: 2px;
+        width: 80px;
+      }
+      .item-slider::-webkit-slider-thumb {
+        height: 7px;
+        width: 7px;
+        background: #000;
+        border: #000;
+      }
+      .black-square {
+        width: 8px;
+        height: 8px;
+        background-color: #000;
+      }
+    }
+  }
+}

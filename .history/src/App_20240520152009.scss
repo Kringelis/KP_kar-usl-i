@@ -1,0 +1,33 @@
+.sidebar {
+  width: 363px;
+  height: 884px;
+  position: absolute;
+  background: #fff;
+  border-right: 1px solid #ddd;
+
+  .sidebar-tabs {
+    display: flex;
+    justify-content: space-around;
+    padding: 10px;
+
+    .tab {
+      width: 100px;
+      height: 50px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      cursor: pointer;
+      border-bottom: 2px solid transparent;
+      transition: border-color 0.3s;
+
+      &.active {
+        border-color: #007bff;
+      }
+    }
+  }
+
+  .sidebar-content {
+    padding: 20px;
+    overflow-y: auto;
+  }
+}

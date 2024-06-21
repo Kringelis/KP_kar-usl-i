@@ -1,0 +1,190 @@
+// PievienotieDati.scss
+
+.pievienotie-dati {
+  .section-title {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 12px;
+    cursor: pointer;
+    background-color: #f0f0f0;
+    border-bottom: 1px solid #ccc;
+
+    &:hover {
+      background-color: #e0e0e0;
+    }
+
+    .accordion-icon {
+      transition: transform 0.3s ease;
+      &.open {
+        transform: rotate(180deg);
+      }
+    }
+  }
+
+  .sub-section {
+    padding: 12px;
+    background-color: #f9f9f9;
+    border-bottom: 1px solid #ccc;
+  }
+
+  .sub-title {
+    padding: 12px;
+    background-color: #f0f0f0;
+    border-bottom: 1px solid #ccc;
+    cursor: pointer;
+
+    &:hover {
+      background-color: #e0e0e0;
+    }
+
+    .accordion-icon {
+      transition: transform 0.3s ease;
+      &.open {
+        transform: rotate(180deg);
+      }
+    }
+  }
+
+  .sub-sub-section {
+    padding: 12px;
+    background-color: #f9f9f9;
+    border-bottom: 1px solid #ccc;
+
+    .toggle-item {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      padding: 8px 0;
+
+      span {
+        flex: 1;
+      }
+
+      .toggle-switch {
+        position: relative;
+        display: inline-block;
+        width: 40px;
+        height: 24px;
+
+        input {
+          opacity: 0;
+          width: 0;
+          height: 0;
+
+          &:checked + .slider {
+            background-color: #2196f3;
+          }
+
+          &:checked + .slider:before {
+            transform: translateX(16px);
+          }
+        }
+
+        .slider {
+          position: absolute;
+          cursor: pointer;
+          top: 0;
+          left: 0;
+          right: 0;
+          bottom: 0;
+          background-color: #ccc;
+          transition: background-color 0.3s ease;
+
+          &:before {
+            position: absolute;
+            content: "";
+            height: 16px;
+            width: 16px;
+            left: 4px;
+            bottom: 4px;
+            background-color: white;
+            transition: transform 0.3s ease;
+          }
+        }
+
+        .slider.round {
+          border-radius: 24px;
+        }
+
+        .slider.round:before {
+          border-radius: 50%;
+        }
+      }
+    }
+  }
+
+  .graphic-item {
+    margin-bottom: 12px;
+
+    .section-title {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      padding: 12px;
+      cursor: pointer;
+      background-color: #f0f0f0;
+      border-bottom: 1px solid #ccc;
+
+      &:hover {
+        background-color: #e0e0e0;
+      }
+
+      .accordion-icon {
+        transition: transform 0.3s ease;
+        &.open {
+          transform: rotate(180deg);
+        }
+      }
+    }
+
+    .color-selection {
+      display: flex;
+      flex-direction: column;
+      padding: 8px 0;
+      background-color: #f9f9f9;
+      border-bottom: 1px solid #ccc;
+
+      .color-row {
+        display: flex;
+        justify-content: space-between;
+        padding: 4px 0;
+
+        .color-block {
+          width: 24px;
+          height: 24px;
+          border: 1px solid #ccc;
+          cursor: pointer;
+
+          &:hover {
+            border-color: #999;
+          }
+        }
+      }
+    }
+
+    .button-row {
+      display: flex;
+      justify-content: flex-end;
+      padding: 8px 0;
+
+      .button {
+        padding: 6px 12px;
+        margin-left: 8px;
+        cursor: pointer;
+        border: 1px solid #ccc;
+        background-color: #f0f0f0;
+
+        &:hover {
+          background-color: #e0e0e0;
+        }
+      }
+    }
+
+    .dividing-line {
+      height: 1px;
+      background-color: #ccc;
+      margin: 12px 0;
+    }
+  }
+}
